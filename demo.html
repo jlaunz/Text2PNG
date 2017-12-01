@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../c2p.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <label for="">
+        输入商标(即时)：
+        <input type="text" name="" id="tminput">
+    </label>
+    <label for="">
+        输入商标(非即时)：fff
+        <input type="text" name="" id="tminput2">
+    </label>
+
+ 
+    <p ><img src="" id="dump" style="border:1px solid gray"></p>
+
+
+    <script>
+
+        var c2p = registerIt(68, 400, 200)
+
+
+        var input1 = document.querySelector('#tminput');
+        var input2 = document.querySelector('#tminput2');
+        input1.onchange = function(e){
+            c2p.getPng('dump', e.target.value);
+        }
+        input2.oninput = function(e){
+            c2p.getPng('dump', e.target.value);
+        }
+    </script>
+</body>
+</html>
